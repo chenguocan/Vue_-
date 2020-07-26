@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 路由链接 -->
+      <router-link to="/user">User</router-link>
+      <router-link to="/register">Register</router-link>
+      <!-- 路由填充位 -->
+      <router-view></router-view>
+    </div>
+  </body>
+  <script src="js/vue.js"></script>
+  <script src="./js/vue-router_3.0.2.js"></script>
+  <script>
+      const User={
+          template:"<h1>User组件</h1>"
+      }
+      const Register={
+          template:"<h1>Register组件</h1>"
+      }
+      const router=new VueRouter({
+          routers:[
+              {
+                  path:"/user",
+                  component:User,
+              },
+              {
+                  path:"/register",
+                  component:Register,
+              }
+          ]
+      })
+      const app=new Vue({
+          el:"#app",
+          data:{
+
+          },
+          router:router;
+      })
+    // const User = {
+    //   template: `<div><h1>User组件</h1></div>`,
+    // };
+    // const Register = {
+    //   template: `<div><h1>User组件</h1></div>`,
+    // };
+    // // const router = new VueRouter({
+    // //   routers: [
+    // //     {
+    // //       path: "/user",
+    // //       component: User,
+    // //     },
+    // //     {
+    // //       path: "/register",
+    // //       component: Register,
+    // //     },
+    // //   ],
+    // // });
+    // // 创建路由实例对象
+    // const router = new VueRouter({
+    //   // 所有的路由规则
+    //   routes: [
+    //     { path: "/user", component: User },
+    //     { path: "/register", component: Register },
+    //   ],
+    // });
+    // const vm = new Vue({
+    //   el: "#app",
+    //   data: {},
+    //   //挂载实例对象
+    //   router,
+    // });
+    // const User = {
+    //   template: "<h1>User 组件</h1>",
+    // };
+
+    // const Register = {
+    //   template: "<h1>Register 组件</h1>",
+    // };
+
+    // // 创建路由实例对象
+    // const router = new VueRouter({
+    //   // 所有的路由规则
+    //   routes: [
+    //     { path: "/user", component: User },
+    //     { path: "/register", component: Register },
+    //   ],
+    // });
+
+    // // 创建 vm 实例对象
+    // const vm = new Vue({
+    //   // 指定控制的区域
+    //   el: "#app",
+    //   data: {},
+    //   // 挂载路由实例对象
+    //   // router: router
+    //   router,
+    // });
+  </script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="#app">
+      <a href="">主页</a>
+      <a href="">科技</a>
+      <a href="">财经</a>
+      <a href="">娱乐</a>
+    </div>
+  </body>
+  <script src="./js/axios.js"></script>
+  <script src="js/vue.js"></script>
+  <script>
+    const zhuye = {
+      tempalte: `<h1>主页</h1>`,
+    };
+    const keji = {
+      tempalte: `<h1>keji</h1>`,
+    };
+    const caijing = {
+      tempalte: `<h1>caijing</h1>`,
+    };
+    const yule = {
+      tempalte: `<h1>yule</h1>`,
+    };
+
+    const app = new Vue({
+      el: "#app",
+      data: {},
+      components: {
+        zhuye,
+        keji,
+        caijing,
+        yule,
+      },
+    });
+  </script>
+</html>
